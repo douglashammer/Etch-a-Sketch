@@ -16,16 +16,16 @@
 }
 
 .grid-container {
-  width: 800px;
-  height: 540px;
+  width: 70vw;
+  height: 47vw;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   margin: 8rem auto;
   margin-top: 3rem;
-  border: 100px solid #b8141b;
-  border-bottom: 140px solid #b8141b;
-  border-radius: 40px;
+  border: 9vw solid #b8141b;
+  border-bottom: 12vw solid #b8141b;
+  border-radius: 5vw;
 }
 
 .grid-item {
