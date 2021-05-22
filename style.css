@@ -1,59 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 :root {
-  --grid-cols: 1;
-  --grid-rows: 1;
+	--grid-cols: 1;
+	--grid-rows: 1;
 }
 
-.logo {
-  position: absolute;
-  top: 80px;
-  left: 250px;
+body {
+	background-color: #5cdb95;
+}
+
+h1 {
+	font-family: 'Space Mono', 'monospace';
+	color: #edf5e1;
+	font-size: 86px;
+	text-align: center;
+	margin: 0;
+	text-shadow: 4px 4px black;
 }
 
 .main-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .grid-container {
-  width: 70vw;
-  height: 47vw;
-  display: grid;
-  grid-template-rows: repeat(var(--grid-rows), 1fr);
-  grid-template-columns: repeat(var(--grid-cols), 1fr);
-  margin: 8rem auto;
-  margin-top: 3rem;
-  border: 9vw solid #b8141b;
-  border-bottom: 12vw solid #b8141b;
-  border-radius: 5vw;
+	width: 55vw;
+	height: 38vw;
+	display: grid;
+	grid-template-rows: repeat(var(--grid-rows), 1fr);
+	grid-template-columns: repeat(var(--grid-cols), 1fr);
+	margin: 8rem auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	border: 7vw solid #edf5e1;
+	border-bottom: 9vw solid #182b3d;
+	border-top: 7vw solid #182b3d;
+	border-radius: 2vw;
 }
 
 .grid-item {
-  border: 1px solid black;
+	border: 1px solid black;
 }
 
-#btns {
-  display: flex;
-  margin-left: 6rem;
-  margin-top: -60px;
+button {
+	background-color: #edf5e1;
+	cursor: pointer;
+	border: none;
+	outline: dotted;
+	width: 75px;
+	height: 30px;
+	font-size: 15px;
+	color: #182b3d;
+	font-family: 'Space Mono';
+	margin: 7px;
 }
 
-#btns>button {
-  margin: 10px;
-  cursor: pointer;
+.reset-btn {
+	height: 45px;
+}
+
+p {
+	font-family: 'Space Mono';
+	font-size: 25px;
+	color: #edf5e1;
+	text-shadow: 2px 2px black;
+}
+
+.btns-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pixel-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-right: 15px;
+}
+
+.mode-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 15px;
 }
 
 .sm-grid {
-  grid-template-columns: repeat(90, auto);
-  grid-template-rows: repeat(65, auto);
+	grid-template-columns: repeat(90, auto);
+	grid-template-rows: repeat(65, auto);
 }
 
 .med-grid {
-  grid-template-columns: repeat(45, auto);
-  grid-template-rows: repeat(32, auto);
+	grid-template-columns: repeat(45, auto);
+	grid-template-rows: repeat(32, auto);
 }
 
 .lg-grid {
-  grid-template-columns: repeat(15, auto);
-  grid-template-rows: repeat(11, auto);
+	grid-template-columns: repeat(15, auto);
+	grid-template-rows: repeat(11, auto);
 }

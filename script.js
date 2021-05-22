@@ -62,10 +62,10 @@ const game = () => {
 	}
 
 	//Button selectors
-	let sizeBtns = document.querySelectorAll('#btns > .size-btn');
+	let sizeBtns = document.querySelectorAll('.size-btn');
 	sizeBtns = [...sizeBtns];
 	const eraseBtn = document.querySelector('.reset-btn');
-	let modeBtns = document.querySelectorAll('#btns > .mode');
+	let modeBtns = document.querySelectorAll('.mode');
 	modeBtns = [...modeBtns];
 
 	sizeBtns.forEach((btn) => {
@@ -84,6 +84,12 @@ const game = () => {
 		});
 	});
 
+	eraseBtn.addEventListener('click', (e) => {
+		const eraseAudio = new Audio('sounds/eraser-sound.mp3');
+		eraseAudio.play();
+		eraseGrid();
+	});
+
 	modeBtns.forEach((btn) => {
 		btn.addEventListener('click', (e) => {
 			if (e.target.classList.contains('classic-mode')) {
@@ -92,10 +98,6 @@ const game = () => {
 				draw(rainbow);
 			}
 		});
-	});
-
-	eraseBtn.addEventListener('click', (e) => {
-		eraseGrid();
 	});
 
 	createGrid();
